@@ -32,8 +32,10 @@ def with_files(files):
         exit(print(f"cat: error reading files ({err})"))
 
     # Write all file contents into the standard output stream
+    print(f"printing content of {files.size()} files:")
     for contents in file_contents:
         sys.stdout.write(contents)
+        sys.stdout.write("******* EOF *******")
 
 def no_files():
     """Executes when no file(s) is/are specified."""
