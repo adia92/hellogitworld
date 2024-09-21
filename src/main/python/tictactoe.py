@@ -38,7 +38,7 @@ def minimax(board, depth, is_maximizing):
             for j in range(3):
                 if board[i][j] == ' ':
                     board[i][j] = 'X'
-                    eval = minimax(board, depth + 1, True) #recursion
+                    eval = minimax(board, depth + 1, True) # Recursion
                     board[i][j] = ' '
                     min_eval = min(min_eval, eval)
         return min_eval
