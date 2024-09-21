@@ -102,6 +102,9 @@ def main():
             row_buttons.append(button)
         buttons.append(row_buttons)
 
+    print("Welcome to Tic-Tac-Toe")
+    print("You'll be playing as 'O' again the computer AI (as 'X')")
+    print("Good luck! and may the odds be ever in your favor")
     root.mainloop()
 
 if __name__ == "__main__":
