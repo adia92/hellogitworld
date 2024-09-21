@@ -45,16 +45,20 @@ def no_files():
             print(input())
     # Graceful exit for Ctrl + C, Ctrl + D
     except KeyboardInterrupt:
+        print("Interrupted, exiting ...")
         exit()
     except EOFError:
+        print("No more input, exiting ...")
         exit()
 
 def main():
     """Entry point of the cat program."""
     # Read the arguments passed to the program
     if not sys.argv[1:]:
+        print("Running in console input mode")
         no_files()
     else:
+        print("Running in files input mode")
         with_files(sys.argv[1:])
 
 if __name__ == "__main__":
