@@ -87,18 +87,22 @@ def ai_move():
         messagebox.showinfo("Tic-Tac-Toe", "It's a draw!")
         root.quit()
 
-root = tk.Tk()
-root.title("Tic-Tac-Toe")
+def main():
+    root = tk.Tk()
+    root.title("Tic-Tac-Toe")
 
-board = [[' ' for _ in range(3)] for _ in range(3)]
-buttons = []
+    board = [[' ' for _ in range(3)] for _ in range(3)]
+    buttons = []
 
-for i in range(3):
-    row_buttons = []
-    for j in range(3):
-        button = tk.Button(root, text=' ', font=('normal', 30), width=5, height=2, command=lambda row=i, col=j: make_move(row, col))
-        button.grid(row=i, column=j)
-        row_buttons.append(button)
-    buttons.append(row_buttons)
+    for i in range(3):
+        row_buttons = []
+        for j in range(3):
+            button = tk.Button(root, text=' ', font=('normal', 30), width=5, height=2, command=lambda row=i, col=j: make_move(row, col))
+            button.grid(row=i, column=j)
+            row_buttons.append(button)
+        buttons.append(row_buttons)
 
-root.mainloop()
+    root.mainloop()
+
+if __name__ == "__main__":
+    main()
